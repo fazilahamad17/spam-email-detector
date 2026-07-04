@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Spam Email Detector - About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="container navbar">
+            <a href="/" class="logo">
+                <span class="logo-icon">🛡️</span> AI Spam Detector
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/detector" class="nav-link">Spam Detector</a></li>
+                <li><a href="/about" class="nav-link active">About</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="animate-fade-in">
+                <div class="about-header">
+                    <h1>About the Project</h1>
+                    <p>Learn how machine learning keeps our digital communication secure.</p>
+                </div>
+
+                <!-- Main explanations in a grid -->
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h2>📨 What is Spam?</h2>
+                        <p>
+                            Spam refers to unwanted or unsolicited bulk messages sent electronically. While often just annoying advertisements, spam messages can also carry phishing links, malware, or scams designed to compromise your personal and financial security.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>🤖 What is Machine Learning?</h2>
+                        <p>
+                            Machine Learning (ML) is a branch of Artificial Intelligence that allows computers to learn patterns from data without being explicitly programmed. Instead of writing complex rules to catch spam, we show the computer thousands of examples of both spam and normal messages, and it learns to distinguish them on its own.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>🔍 How This Project Works</h2>
+                        <p>
+                            This website uses a statistical model called <strong>Multinomial Naive Bayes</strong>. First, text is converted into numbers using a technique called <strong>TF-IDF</strong> (Term Frequency-Inverse Document Frequency), which calculates how important a word is in a message. The model calculates the mathematical probability of a message being spam based on the words it contains.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <h2>📊 The Dataset</h2>
+                        <p>
+                            We trained our algorithm on the popular <strong>SMS Spam Collection Dataset</strong>. It contains over 5,500 real-world messages, labeled as "ham" (legitimate) or "spam". This allows our model to achieve high accuracy (above 96%) on typical messages.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Technologies Used Section -->
+                <div class="tech-section">
+                    <h2>Technologies Used</h2>
+                    <div class="tech-grid">
+                        <div class="tech-badge">
+                            <span class="tech-name">Python</span>
+                            <span class="tech-desc">Core programming language</span>
+                        </div>
+                        <div class="tech-badge">
+                            <span class="tech-name">Flask</span>
+                            <span class="tech-desc">Lightweight web framework</span>
+                        </div>
+                        <div class="tech-badge">
+                            <span class="tech-name">Scikit-learn</span>
+                            <span class="tech-desc">Machine learning library</span>
+                        </div>
+                        <div class="tech-badge">
+                            <span class="tech-name">HTML / CSS / JS</span>
+                            <span class="tech-desc">Responsive frontend UI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Spam Detector - Cyber Security Mini Project. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

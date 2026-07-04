@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Spam Email Detector - Spam Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <div class="container navbar">
+            <a href="/" class="logo">
+                <span class="logo-icon">🛡️</span> AI Spam Detector
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/detector" class="nav-link active">Spam Detector</a></li>
+                <li><a href="/about" class="nav-link">About</a></li>
+                <li><a href="/contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="detector-wrapper animate-fade-in">
+                <div class="detector-header">
+                    <h1>Email & SMS Spam Detector</h1>
+                    <p>Enter the content of the message or email below to check if it is spam.</p>
+                </div>
+                
+                <div class="card">
+                    <form id="detector-form">
+                        <textarea 
+                            id="message-input" 
+                            class="input-area" 
+                            placeholder="Paste your email or message content here..." 
+                            required
+                        ></textarea>
+                        
+                        <div class="button-group">
+                            <button type="button" id="clear-btn" class="btn btn-outline">Clear</button>
+                            <button type="submit" id="analyze-btn" class="btn btn-primary">Analyze</button>
+                        </div>
+                    </form>
+
+                    <!-- Result Box -->
+                    <div id="result-box" class="result-box">
+                        <div class="result-title">
+                            Prediction: <span id="result-label">Not Spam</span>
+                        </div>
+                        <div class="result-meta">
+                            Confidence Level: <span id="confidence-text">98.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Spam Detector - Cyber Security Mini Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
